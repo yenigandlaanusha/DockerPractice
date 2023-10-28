@@ -1,0 +1,36 @@
+Create an EC2 instance
+Select ubuntu 
+Select key pair if existing otherwise create a  new key pair
+launch an instance
+
+To login to ubuntu machine
+ssh -i .pemfile/path ubuntu@public-ip-address
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl status docker
+docker hello-world -> permission issues
+sudo usermod -aG docker ubuntu
+exit from ubuntu and again ssh to ubuntu machine
+docker hello-world
+
+git clone https://github.com/yenigandlaanusha/DockerPractice
+cd DockerPractice
+Create an dockerhub account
+docker login 
+enter username , password
+
+To build first docker image
+docker build -t anushayenigandla/my-first-docker-image:latest .
+docker images -> verify the images
+
+To Run the docker container
+docker run -it anushayenigandla/my-first-docker-image
+
+To push the docker container
+docker push anushayenigandla/my-first-docker-image
+
+
+
+
+
+
